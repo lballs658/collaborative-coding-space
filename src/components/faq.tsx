@@ -4,23 +4,15 @@ import { Plus, Minus } from "lucide-react";
 const faqs = [
   {
     q: "What should I send before booking?",
-    a: "Send the VIN, year/make/model, service needed, module part numbers if available, fault codes or shop notes, and the service location. Without that information, a real quote is not possible.",
+    a: "Send the VIN, year/make/model, service needed, module numbers or fault codes when available, and the vehicle location.",
   },
   {
-    q: "Do you work with repair shops and body shops?",
-    a: "Yes. The service is built for repair shops, body shops, performance shops, dealers, and approved private clients that need mobile electronics, programming, cloning, tuning, or diagnostics support.",
+    q: "Do you have a shop I can visit?",
+    a: "No. Auto Lab Solutions is mobile only and does not have a public walk-in location.",
   },
   {
-    q: "Is diagnostics available to every customer?",
-    a: "No. Diagnostics are available for qualified programming customers, repair shops, body shops, and repeat clients. General diagnostic-only requests are reviewed before booking.",
-  },
-  {
-    q: "What determines whether a vehicle can be serviced?",
-    a: "Availability depends on the VIN, model year, module, controller, software access, security gateway rules, immobilizer data, battery condition, network condition, and previous work done to the vehicle.",
-  },
-  {
-    q: "Do you do mechanical repairs?",
-    a: "Not as a general service. The focus is computer-side automotive work: programming, cloning, calibration, coding, electronic service functions, and electronics diagnostics for qualified jobs.",
+    q: "Are all services available for every brand?",
+    a: "No. Support depends on the vehicle and job. Diagnostics are not offered for Volvo, Subaru, Nissan, or Honda; programming or tuning may be available for some cases.",
   },
   {
     q: "How does travel pricing work?",
@@ -29,19 +21,16 @@ const faqs = [
 ];
 
 export function Faq() {
-  const [open, setOpen] = useState<number | null>(0);
+  const [open, setOpen] = useState<number | null>(null);
 
   return (
-    <section id="faq" className="mx-auto max-w-3xl px-5 py-24">
+    <section id="faq" className="mx-auto max-w-3xl px-5 py-16 sm:py-20">
       <div className="text-center">
         <p className="text-xs font-semibold uppercase tracking-[0.2em] text-primary">FAQ</p>
         <h2 className="mt-3 font-display text-3xl font-bold sm:text-4xl">Common questions</h2>
-        <p className="mt-4 text-muted-foreground">
-          Clear answers create better inquiries and fewer wasted calls.
-        </p>
       </div>
 
-      <div className="mt-12 space-y-3">
+      <div className="mt-8 space-y-3">
         {faqs.map((f, i) => {
           const isOpen = open === i;
           return (

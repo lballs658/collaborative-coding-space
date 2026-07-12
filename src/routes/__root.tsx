@@ -12,9 +12,7 @@ import { useEffect, type ReactNode } from "react";
 import appCss from "../styles.css?url";
 import { reportLovableError } from "../lib/lovable-error-reporting";
 
-
 const serviceAreas = [
-  "North New Jersey",
   "Bergen County NJ",
   "Hudson County NJ",
   "Essex County NJ",
@@ -31,7 +29,7 @@ const localBusinessJsonLd = {
   "@type": "AutoRepair",
   name: "Auto Lab Solutions",
   description:
-    "Mobile automotive electronics service specializing in OEM programming, ECU and TCU cloning, supported tuning, coding, electronic service functions, and qualified diagnostics across North New Jersey and New York City.",
+    "Mobile automotive electronics service specializing in OEM programming, ECU and TCU cloning, supported tuning, coding, electronic service functions, and qualified diagnostics across Bergen, Hudson, Essex, Passaic, Union, and Morris counties in New Jersey, plus Manhattan, Brooklyn, and Staten Island.",
   telephone: "+15513201730",
   priceRange: "Varies by distance, vehicle, controller, and job type",
   areaServed: serviceAreas,
@@ -47,7 +45,14 @@ const localBusinessJsonLd = {
     { "@type": "Offer", itemOffered: { "@type": "Service", name: "OEM module programming" } },
     { "@type": "Offer", itemOffered: { "@type": "Service", name: "ECU and TCU cloning" } },
     { "@type": "Offer", itemOffered: { "@type": "Service", name: "Supported ECU and TCU tuning" } },
-    { "@type": "Offer", itemOffered: { "@type": "Service", name: "Qualified automotive diagnostics" } },
+    {
+      "@type": "Offer",
+      itemOffered: { "@type": "Service", name: "Supported key and immobilizer programming" },
+    },
+    {
+      "@type": "Offer",
+      itemOffered: { "@type": "Service", name: "Qualified automotive diagnostics" },
+    },
   ],
 };
 
@@ -65,10 +70,10 @@ const faqJsonLd = {
     },
     {
       "@type": "Question",
-      name: "Do you work with repair shops and body shops?",
+      name: "Do you have a shop I can visit?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Yes. The service is built for repair shops, body shops, performance shops, dealers, and approved private clients that need mobile electronics support.",
+        text: "No. Auto Lab Solutions is mobile only and does not have a public walk-in location.",
       },
     },
   ],
@@ -143,7 +148,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       {
         name: "description",
         content:
-          "Mobile automotive electronics for OEM programming, ECU/TCU cloning, supported tuning, coding, and qualified diagnostics across North New Jersey, Manhattan, Brooklyn, and Staten Island.",
+          "Mobile automotive electronics for OEM programming, ECU/TCU cloning, supported tuning, coding, and qualified diagnostics across Bergen, Hudson, Essex, Passaic, Union, and Morris counties, plus Manhattan, Brooklyn, and Staten Island.",
       },
       { name: "author", content: "Auto Lab Solutions" },
       {
@@ -153,7 +158,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       {
         property: "og:description",
         content:
-          "Mobile programming, cloning, tuning, coding, and qualified diagnostics for repair shops, body shops, dealers, performance shops, and approved private clients across NJ & NYC.",
+          "Mobile programming, cloning, tuning, coding, and qualified diagnostics for repair shops, body shops, dealers, performance shops, and approved private clients across Bergen, Hudson, Essex, Passaic, Union, and Morris counties, plus Manhattan, Brooklyn, and Staten Island.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },

@@ -1,49 +1,40 @@
 const steps = [
   {
-    n: "01",
+    n: "1",
     title: "Send the job details",
-    body: "Send the VIN, year/make/model, location, service needed, module part numbers if available, and any fault codes or shop notes.",
+    body: "VIN, vehicle, service needed, notes, and location.",
   },
   {
-    n: "02",
+    n: "2",
     title: "We verify support",
-    body: "Controller family, software access, security gateway rules, immobilizer requirements, and module compatibility are checked before pricing.",
+    body: "We confirm support, requirements, and feasibility.",
   },
   {
-    n: "03",
+    n: "3",
     title: "Quote and schedule",
-    body: "Once the job is approved, travel pricing, service window, requirements, and expected outcome are confirmed before dispatch.",
-  },
-  {
-    n: "04",
-    title: "Complete and document",
-    body: "The programming, cloning, calibration, or diagnostic workflow is completed on site, then the result and next steps are clearly explained.",
+    body: "Travel, price, requirements, and service window are set before dispatch.",
   },
 ];
 
 export function Process() {
   return (
-    <section id="process" className="border-y border-border bg-surface/40">
-      <div className="mx-auto max-w-6xl px-5 py-24">
-        <div className="max-w-2xl">
-          <p className="text-xs font-semibold uppercase tracking-[0.2em] text-primary">
-            How booking works
-          </p>
-          <h2 className="mt-3 font-display text-3xl font-bold sm:text-4xl">
-            No VIN, no real quote. That protects both sides.
-          </h2>
-          <p className="mt-4 text-muted-foreground">
-            A serious electronics job needs verification before anyone promises a price or outcome.
-            This keeps the schedule clean and prevents wasted travel.
-          </p>
+    <section className="border-y border-border bg-surface/40">
+      <div className="mx-auto grid max-w-6xl gap-6 px-5 py-10 lg:grid-cols-[0.55fr_1.45fr] lg:items-center">
+        <div>
+          <p className="text-xs font-semibold uppercase tracking-[0.2em] text-primary">Booking</p>
+          <h2 className="mt-2 font-display text-2xl font-bold">Three steps. No guesswork.</h2>
         </div>
 
-        <div className="mt-14 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
+        <div className="grid gap-3 sm:grid-cols-3">
           {steps.map((s) => (
-            <div key={s.n} className="relative rounded-xl border border-border bg-card p-7">
-              <span className="font-display text-4xl font-bold text-primary/30">{s.n}</span>
-              <h3 className="mt-3 font-display text-xl font-semibold">{s.title}</h3>
-              <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{s.body}</p>
+            <div key={s.n} className="flex gap-3 rounded-xl border border-border bg-card p-4">
+              <span className="grid h-7 w-7 shrink-0 place-items-center rounded-full bg-primary text-sm font-bold text-primary-foreground">
+                {s.n}
+              </span>
+              <div>
+                <h3 className="font-display text-sm font-semibold">{s.title}</h3>
+                <p className="mt-1 text-xs leading-relaxed text-muted-foreground">{s.body}</p>
+              </div>
             </div>
           ))}
         </div>

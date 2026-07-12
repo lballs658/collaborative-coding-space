@@ -9,7 +9,11 @@ export function SiteFooter() {
           <span className="font-display text-sm font-semibold">Auto Lab Solutions</span>
         </div>
         <p className="text-center text-xs text-muted-foreground">
-          Mobile automotive electronics · NJ &amp; NYC · Mobile service only, no walk-ins
+          Mobile automotive electronics · NJ &amp; NYC ·{" "}
+          <a href="mailto:autolabsolution@gmail.com" className="underline hover:text-foreground">
+            autolabsolution@gmail.com
+          </a>{" "}
+          · Mobile service only, no walk-ins
         </p>
         <p className="text-xs text-muted-foreground">
           © {new Date().getFullYear()} Auto Lab Solutions

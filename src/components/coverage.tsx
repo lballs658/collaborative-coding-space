@@ -1,4 +1,4 @@
-import { MapPin, Clock, Navigation, PhoneCall, BadgeCheck } from "lucide-react";
+import { MapPin, Clock, Building2, CarFront, Route } from "lucide-react";
 
 const areas = [
   "Bergen County, NJ",
@@ -14,26 +14,30 @@ const areas = [
 
 export function Coverage() {
   return (
-    <section id="coverage" className="mx-auto max-w-6xl px-5 py-24">
-      <div className="grid gap-12 lg:grid-cols-2">
-        <div>
-          <p className="text-xs font-semibold uppercase tracking-[0.2em] text-primary">
-            Service area
-          </p>
-          <h2 className="mt-3 font-display text-3xl font-bold sm:text-4xl">
-            Mobile coverage across North Jersey and NYC.
-          </h2>
-          <p className="mt-4 max-w-lg text-muted-foreground">
-            We come to repair shops, body shops, performance shops, dealers, and approved private
-            client locations. Travel pricing changes by distance, tolls, parking access, and job
-            type.
-          </p>
+    <section id="coverage" className="mx-auto max-w-6xl px-5 py-16 sm:py-20">
+      <div className="max-w-2xl">
+        <p className="text-xs font-semibold uppercase tracking-[0.2em] text-primary">
+          Service area
+        </p>
+        <h2 className="mt-3 font-display text-3xl font-bold sm:text-4xl">
+          Where we work & who we serve
+        </h2>
+        <p className="mt-4 text-muted-foreground">
+          Mobile only — we come to your shop or location. No public walk-in.
+        </p>
+      </div>
 
-          <div className="mt-8 flex flex-wrap gap-2.5">
+      <div className="mt-10 grid gap-5 lg:grid-cols-3">
+        {/* Coverage map card */}
+        <div className="rounded-2xl border border-border bg-card p-6 shadow-card lg:col-span-2">
+          <div className="flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.18em] text-primary">
+            <MapPin className="h-4 w-4" /> Counties covered
+          </div>
+          <div className="mt-4 flex flex-wrap gap-2">
             {areas.map((a) => (
               <span
                 key={a}
-                className="inline-flex items-center gap-1.5 rounded-full border border-border bg-card px-3.5 py-1.5 text-sm text-foreground/90"
+                className="inline-flex items-center gap-1.5 rounded-full border border-border bg-surface/60 px-3.5 py-1.5 text-sm text-foreground/90"
               >
                 <MapPin className="h-3.5 w-3.5 text-primary" />
                 {a}
@@ -41,59 +45,47 @@ export function Coverage() {
             ))}
           </div>
 
-          <div className="mt-8 rounded-xl border border-border bg-card p-5">
-            <div className="flex items-start gap-3">
-              <span className="grid h-9 w-9 shrink-0 place-items-center rounded-lg bg-primary/10 text-primary">
-                <Navigation className="h-4 w-4" />
-              </span>
-              <p className="text-sm leading-relaxed text-muted-foreground">
-                Best-fit jobs are scheduled during 9:00 AM – 7:00 PM service hours. Same-day service
-                depends on job type, support verification, current route, and distance.
-              </p>
+          <div className="mt-6 grid gap-3 sm:grid-cols-2">
+            <div className="flex items-start gap-3 rounded-xl border border-border bg-surface/60 p-4">
+              <Clock className="mt-0.5 h-5 w-5 shrink-0 text-primary" />
+              <div>
+                <p className="text-sm font-semibold">Hours</p>
+                <p className="mt-0.5 text-sm text-muted-foreground">
+                  9 AM – 7 PM, seven days a week
+                </p>
+              </div>
+            </div>
+            <div className="flex items-start gap-3 rounded-xl border border-border bg-surface/60 p-4">
+              <Route className="mt-0.5 h-5 w-5 shrink-0 text-primary" />
+              <div>
+                <p className="text-sm font-semibold">Outside the area?</p>
+                <p className="mt-0.5 text-sm text-muted-foreground">
+                  Travel farther when costs are covered. Quoted up front.
+                </p>
+              </div>
             </div>
           </div>
         </div>
 
-        <div className="rounded-2xl border border-border bg-card p-8 shadow-card">
-          <span className="grid h-11 w-11 place-items-center rounded-lg bg-primary/10 text-primary">
-            <BadgeCheck className="h-5 w-5" />
-          </span>
-          <h3 className="mt-5 font-display text-xl font-semibold">What to expect when you call</h3>
-          <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
-            Every job starts with a quick verification so we show up prepared and priced correctly.
-            Share the VIN and vehicle history if you have it, and we handle the rest.
-          </p>
-          <div className="mt-5 space-y-3">
-            <div className="flex items-start gap-3 rounded-lg border border-border bg-surface/60 p-4">
-              <span className="mt-0.5 grid h-8 w-8 shrink-0 place-items-center rounded-lg bg-primary/10 text-primary">
-                <PhoneCall className="h-4 w-4" />
-              </span>
-              <p className="text-sm text-foreground/90">
-                <span className="font-semibold text-foreground">No calls without a VIN or vehicle details.</span>{" "}
-                A VIN, year, make, model, and a short description of the concern let us confirm
-                feasibility and quote accurately on the first call.
-              </p>
-            </div>
-            <div className="flex items-start gap-3 rounded-lg border border-border bg-surface/60 p-4">
-              <span className="mt-0.5 grid h-8 w-8 shrink-0 place-items-center rounded-lg bg-primary/10 text-primary">
-                <Clock className="h-4 w-4" />
-              </span>
-              <p className="text-sm text-foreground/90">
-                <span className="font-semibold text-foreground">Same-day slots when the route allows.</span>{" "}
-                Book early in the day for the best chance of same-day dispatch across NJ and NYC.
-              </p>
-            </div>
-            <div className="flex items-start gap-3 rounded-lg border border-border bg-surface/60 p-4">
-              <span className="mt-0.5 grid h-8 w-8 shrink-0 place-items-center rounded-lg bg-primary/10 text-primary">
-                <BadgeCheck className="h-4 w-4" />
-              </span>
-              <p className="text-sm text-foreground/90">
-                <span className="font-semibold text-foreground">Firm pricing, no bay time wasted.</span>{" "}
-                Travel, labor, and programming are quoted up front, so shops and clients know
-                exactly what the job costs before we roll.
-              </p>
-            </div>
+        {/* Who we serve card */}
+        <div className="rounded-2xl border border-border bg-card p-6 shadow-card">
+          <div className="flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.18em] text-primary">
+            <Building2 className="h-4 w-4" /> Who we serve
           </div>
+          <ul className="mt-4 space-y-3">
+            <li className="flex items-start gap-3 rounded-xl border border-border bg-surface/60 p-4">
+              <Building2 className="mt-0.5 h-5 w-5 shrink-0 text-primary" />
+              <span className="text-sm">Repair, body, performance shops & dealers</span>
+            </li>
+            <li className="flex items-start gap-3 rounded-xl border border-border bg-surface/60 p-4">
+              <CarFront className="mt-0.5 h-5 w-5 shrink-0 text-primary" />
+              <span className="text-sm">Qualified private clients with a defined request</span>
+            </li>
+          </ul>
+          <p className="mt-4 text-xs leading-relaxed text-muted-foreground">
+            Not a general mobile mechanic. Scope is limited to supported automotive electronics,
+            software, modules, keys, and qualified diagnostics.
+          </p>
         </div>
       </div>
     </section>
