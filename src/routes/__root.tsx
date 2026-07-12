@@ -65,14 +65,6 @@ const faqJsonLd = {
     },
     {
       "@type": "Question",
-      name: "Which brands are excluded from diagnostics?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Diagnostics are not offered for Volvo, Subaru, Nissan/Infiniti, or Honda/Acura. Programming and tuning may still be available for select vehicles after verification.",
-      },
-    },
-    {
-      "@type": "Question",
       name: "Do you work with repair shops and body shops?",
       acceptedAnswer: {
         "@type": "Answer",
