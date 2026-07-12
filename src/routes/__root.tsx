@@ -12,6 +12,76 @@ import { useEffect, type ReactNode } from "react";
 import appCss from "../styles.css?url";
 import { reportLovableError } from "../lib/lovable-error-reporting";
 
+
+const serviceAreas = [
+  "North New Jersey",
+  "Bergen County NJ",
+  "Hudson County NJ",
+  "Essex County NJ",
+  "Passaic County NJ",
+  "Union County NJ",
+  "Morris County NJ",
+  "Manhattan NY",
+  "Brooklyn NY",
+  "Staten Island NY",
+];
+
+const localBusinessJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "AutoRepair",
+  name: "Auto Lab Solutions",
+  description:
+    "Mobile automotive electronics service specializing in OEM programming, ECU and TCU cloning, supported tuning, coding, electronic service functions, and qualified diagnostics across North New Jersey and New York City.",
+  telephone: "+15513201730",
+  priceRange: "Varies by distance, vehicle, controller, and job type",
+  areaServed: serviceAreas,
+  openingHoursSpecification: [
+    {
+      "@type": "OpeningHoursSpecification",
+      dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+      opens: "09:00",
+      closes: "19:00",
+    },
+  ],
+  makesOffer: [
+    { "@type": "Offer", itemOffered: { "@type": "Service", name: "OEM module programming" } },
+    { "@type": "Offer", itemOffered: { "@type": "Service", name: "ECU and TCU cloning" } },
+    { "@type": "Offer", itemOffered: { "@type": "Service", name: "Supported ECU and TCU tuning" } },
+    { "@type": "Offer", itemOffered: { "@type": "Service", name: "Qualified automotive diagnostics" } },
+  ],
+};
+
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: [
+    {
+      "@type": "Question",
+      name: "What should I send before booking?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Send the VIN, year/make/model, service needed, module part numbers if available, fault codes or shop notes, and the service location.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Which brands are excluded from diagnostics?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Diagnostics are not offered for Volvo, Subaru, Nissan/Infiniti, or Honda/Acura. Programming and tuning may still be available for select vehicles after verification.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Do you work with repair shops and body shops?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes. The service is built for repair shops, body shops, performance shops, dealers, and approved private clients that need mobile electronics support.",
+      },
+    },
+  ],
+};
+
 function NotFoundComponent() {
   return (
     <div className="flex min-h-screen items-center justify-center bg-background px-4">
@@ -77,19 +147,37 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Lovable App" },
-      { name: "description", content: "Lovable Generated Project" },
-      { name: "author", content: "Lovable" },
-      { property: "og:title", content: "Lovable App" },
-      { property: "og:description", content: "Lovable Generated Project" },
+      { title: "Auto Lab Solutions | Mobile ECU Programming, Cloning, Tuning & Diagnostics" },
+      {
+        name: "description",
+        content:
+          "Mobile automotive electronics for OEM programming, ECU/TCU cloning, supported tuning, coding, and qualified diagnostics across North New Jersey, Manhattan, Brooklyn, and Staten Island.",
+      },
+      { name: "author", content: "Auto Lab Solutions" },
+      {
+        property: "og:title",
+        content: "Auto Lab Solutions | Mobile ECU Programming, Cloning & Diagnostics",
+      },
+      {
+        property: "og:description",
+        content:
+          "Mobile programming, cloning, tuning, coding, and qualified diagnostics for repair shops, body shops, dealers, performance shops, and approved private clients across NJ & NYC.",
+      },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:site", content: "@Lovable" },
+      { name: "robots", content: "index, follow" },
+      { name: "theme-color", content: "#151923" },
     ],
     links: [
       {
         rel: "stylesheet",
         href: appCss,
+      },
+      { rel: "preconnect", href: "https://fonts.googleapis.com" },
+      { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
+      {
+        rel: "stylesheet",
+        href: "https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&family=Space+Grotesk:wght@500;600;700&display=swap",
       },
       { rel: "icon", href: "/favicon.ico", type: "image/x-icon" },
     ],
@@ -105,6 +193,14 @@ function RootShell({ children }: { children: ReactNode }) {
     <html lang="en">
       <head>
         <HeadContent />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessJsonLd) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+        />
       </head>
       <body>
         {children}
