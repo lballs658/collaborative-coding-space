@@ -5,3 +5,6 @@ publish = "dist"
 [dev]
 command = "vite dev"
 port = 3000
+
+[build.environment]
+NODE_VERSION = "22"
