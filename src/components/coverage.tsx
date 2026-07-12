@@ -1,21 +1,11 @@
-import { MapPin, Clock, Navigation, PhoneCall, BadgeCheck } from "lucide-react";
+import { MapPin, Clock, Building2, CarFront } from "lucide-react";
 
-const areas = [
-  "Bergen County, NJ",
-  "Hudson County, NJ",
-  "Essex County, NJ",
-  "Passaic County, NJ",
-  "Union County, NJ",
-  "Morris County, NJ",
-  "Manhattan, NY",
-  "Brooklyn, NY",
-  "Staten Island, NY",
-];
+const areas = ["North New Jersey", "Manhattan", "Brooklyn", "Staten Island"];
 
 export function Coverage() {
   return (
-    <section id="coverage" className="mx-auto max-w-6xl px-5 py-24">
-      <div className="grid gap-12 lg:grid-cols-2">
+    <section id="coverage" className="mx-auto max-w-6xl px-5 py-16 sm:py-20">
+      <div className="grid gap-8 lg:grid-cols-2">
         <div>
           <p className="text-xs font-semibold uppercase tracking-[0.2em] text-primary">
             Service area
@@ -24,9 +14,7 @@ export function Coverage() {
             Mobile coverage across North Jersey and NYC.
           </h2>
           <p className="mt-4 max-w-lg text-muted-foreground">
-            We come to repair shops, body shops, performance shops, dealers, and approved private
-            client locations. Travel pricing changes by distance, tolls, parking access, and job
-            type.
+            Mobile service only. No public shop or walk-in location.
           </p>
 
           <div className="mt-8 flex flex-wrap gap-2.5">
@@ -41,59 +29,37 @@ export function Coverage() {
             ))}
           </div>
 
-          <div className="mt-8 rounded-xl border border-border bg-card p-5">
+          <div className="mt-6 rounded-xl border border-border bg-card p-4">
             <div className="flex items-start gap-3">
-              <span className="grid h-9 w-9 shrink-0 place-items-center rounded-lg bg-primary/10 text-primary">
-                <Navigation className="h-4 w-4" />
-              </span>
+              <Clock className="mt-0.5 h-5 w-5 shrink-0 text-primary" />
               <p className="text-sm leading-relaxed text-muted-foreground">
-                Best-fit jobs are scheduled during 9:00 AM – 7:00 PM service hours. Same-day service
-                depends on job type, support verification, current route, and distance.
+                Hours: 9 AM–7 PM. Travel pricing varies by distance, tolls, parking, and job type.
               </p>
             </div>
           </div>
         </div>
 
-        <div className="rounded-2xl border border-border bg-card p-8 shadow-card">
-          <span className="grid h-11 w-11 place-items-center rounded-lg bg-primary/10 text-primary">
-            <BadgeCheck className="h-5 w-5" />
-          </span>
-          <h3 className="mt-5 font-display text-xl font-semibold">What to expect when you call</h3>
-          <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
-            Every job starts with a quick verification so we show up prepared and priced correctly.
-            Share the VIN and vehicle history if you have it, and we handle the rest.
+        <div className="rounded-2xl border border-border bg-card p-6 shadow-card">
+          <p className="text-xs font-semibold uppercase tracking-[0.2em] text-primary">
+            Who we serve
           </p>
-          <div className="mt-5 space-y-3">
-            <div className="flex items-start gap-3 rounded-lg border border-border bg-surface/60 p-4">
-              <span className="mt-0.5 grid h-8 w-8 shrink-0 place-items-center rounded-lg bg-primary/10 text-primary">
-                <PhoneCall className="h-4 w-4" />
-              </span>
-              <p className="text-sm text-foreground/90">
-                <span className="font-semibold text-foreground">No calls without a VIN or vehicle details.</span>{" "}
-                A VIN, year, make, model, and a short description of the concern let us confirm
-                feasibility and quote accurately on the first call.
-              </p>
+          <h3 className="mt-2 font-display text-xl font-semibold">
+            Trade-focused, private clients welcome.
+          </h3>
+          <div className="mt-5 grid gap-3 sm:grid-cols-2">
+            <div className="flex items-center gap-3 rounded-lg border border-border bg-surface/60 p-4">
+              <Building2 className="h-5 w-5 shrink-0 text-primary" />
+              <span className="text-sm">Repair, body, performance shops, and dealers</span>
             </div>
-            <div className="flex items-start gap-3 rounded-lg border border-border bg-surface/60 p-4">
-              <span className="mt-0.5 grid h-8 w-8 shrink-0 place-items-center rounded-lg bg-primary/10 text-primary">
-                <Clock className="h-4 w-4" />
-              </span>
-              <p className="text-sm text-foreground/90">
-                <span className="font-semibold text-foreground">Same-day slots when the route allows.</span>{" "}
-                Book early in the day for the best chance of same-day dispatch across NJ and NYC.
-              </p>
-            </div>
-            <div className="flex items-start gap-3 rounded-lg border border-border bg-surface/60 p-4">
-              <span className="mt-0.5 grid h-8 w-8 shrink-0 place-items-center rounded-lg bg-primary/10 text-primary">
-                <BadgeCheck className="h-4 w-4" />
-              </span>
-              <p className="text-sm text-foreground/90">
-                <span className="font-semibold text-foreground">Firm pricing, no bay time wasted.</span>{" "}
-                Travel, labor, and programming are quoted up front, so shops and clients know
-                exactly what the job costs before we roll.
-              </p>
+            <div className="flex items-center gap-3 rounded-lg border border-border bg-surface/60 p-4">
+              <CarFront className="h-5 w-5 shrink-0 text-primary" />
+              <span className="text-sm">Qualified private clients with a defined request</span>
             </div>
           </div>
+          <p className="mt-5 text-sm leading-relaxed text-muted-foreground">
+            This is not a general mobile mechanic service. Work is limited to supported automotive
+            electronics, software, modules, keys, and qualified diagnostics.
+          </p>
         </div>
       </div>
     </section>

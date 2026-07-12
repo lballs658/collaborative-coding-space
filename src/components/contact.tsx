@@ -22,7 +22,7 @@ export function Contact() {
       service: String(data.get("service") || ""),
       location: String(data.get("location") || ""),
       notes: String(data.get("notes") || ""),
-      bot_field: String(data.get("bot-field") || ""),
+      "bot-field": String(data.get("bot-field") || ""),
     };
 
     setStatus("sending");
@@ -44,19 +44,17 @@ export function Contact() {
 
   return (
     <section id="contact" className="border-t border-border bg-surface/40">
-      <div className="mx-auto grid max-w-6xl gap-12 px-5 py-24 lg:grid-cols-2">
+      <div className="mx-auto grid max-w-6xl gap-9 px-5 py-16 sm:py-20 lg:grid-cols-[0.8fr_1.2fr]">
         <div>
           <p className="text-xs font-semibold uppercase tracking-[0.2em] text-primary">Contact</p>
           <h2 className="mt-3 font-display text-3xl font-bold sm:text-4xl">
             Send the VIN and service request.
           </h2>
           <p className="mt-4 max-w-md text-muted-foreground">
-            Call or text with the job details. For the fastest answer, send the VIN, vehicle,
-            service needed, fault codes or notes, and the location. Mobile service only — no
-            walk-ins.
+            Include the vehicle, job, notes, and location. Texting is the fastest option.
           </p>
 
-          <div className="mt-8 space-y-3">
+          <div className="mt-6 grid gap-3 sm:grid-cols-2 lg:grid-cols-1">
             <a
               href="tel:+15513201730"
               className="flex items-center gap-3 rounded-xl border border-border bg-card px-5 py-4 transition-colors hover:border-primary/50"
@@ -78,10 +76,12 @@ export function Contact() {
               </span>
               <span>
                 <span className="block text-sm text-muted-foreground">Text</span>
-                <span className="font-display text-lg font-semibold">VIN &amp; service request</span>
+                <span className="font-display text-lg font-semibold">
+                  VIN &amp; service request
+                </span>
               </span>
             </a>
-            <div className="flex items-center gap-3 rounded-xl border border-border bg-card px-5 py-4">
+            <div className="flex items-center gap-3 rounded-xl border border-border bg-card px-5 py-4 sm:col-span-2 lg:col-span-1">
               <span className="grid h-10 w-10 place-items-center rounded-lg bg-primary/10 text-primary">
                 <Clock className="h-5 w-5" />
               </span>
@@ -99,7 +99,7 @@ export function Contact() {
           data-netlify="true"
           netlify-honeypot="bot-field"
           onSubmit={handleSubmit}
-          className="rounded-2xl border border-border bg-card p-7 shadow-card"
+          className="rounded-2xl border border-border bg-card p-5 shadow-card sm:p-7"
         >
           <input type="hidden" name="form-name" value="callback-request" />
           <p className="hidden">
@@ -161,7 +161,7 @@ export function Contact() {
               </span>
               <textarea
                 name="notes"
-                rows={4}
+                rows={3}
                 placeholder="Add codes, symptoms, module numbers, or shop notes"
                 className="w-full rounded-lg border border-input bg-surface px-3.5 py-2.5 text-sm text-foreground placeholder:text-muted-foreground/60 focus:border-primary focus:outline-none focus:ring-2 focus:ring-ring/40"
               />

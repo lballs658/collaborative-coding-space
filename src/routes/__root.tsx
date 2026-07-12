@@ -12,7 +12,6 @@ import { useEffect, type ReactNode } from "react";
 import appCss from "../styles.css?url";
 import { reportLovableError } from "../lib/lovable-error-reporting";
 
-
 const serviceAreas = [
   "North New Jersey",
   "Bergen County NJ",
@@ -47,7 +46,14 @@ const localBusinessJsonLd = {
     { "@type": "Offer", itemOffered: { "@type": "Service", name: "OEM module programming" } },
     { "@type": "Offer", itemOffered: { "@type": "Service", name: "ECU and TCU cloning" } },
     { "@type": "Offer", itemOffered: { "@type": "Service", name: "Supported ECU and TCU tuning" } },
-    { "@type": "Offer", itemOffered: { "@type": "Service", name: "Qualified automotive diagnostics" } },
+    {
+      "@type": "Offer",
+      itemOffered: { "@type": "Service", name: "Supported key and immobilizer programming" },
+    },
+    {
+      "@type": "Offer",
+      itemOffered: { "@type": "Service", name: "Qualified automotive diagnostics" },
+    },
   ],
 };
 
@@ -65,10 +71,10 @@ const faqJsonLd = {
     },
     {
       "@type": "Question",
-      name: "Do you work with repair shops and body shops?",
+      name: "Do you have a shop I can visit?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Yes. The service is built for repair shops, body shops, performance shops, dealers, and approved private clients that need mobile electronics support.",
+        text: "No. Auto Lab Solutions is mobile only and does not have a public walk-in location.",
       },
     },
   ],

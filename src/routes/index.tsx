@@ -4,8 +4,6 @@ import { Hero } from "@/components/hero";
 import { Services } from "@/components/services";
 import { Process } from "@/components/process";
 import { Coverage } from "@/components/coverage";
-import { WhyUs } from "@/components/why-us";
-import { ClientFit } from "@/components/client-fit";
 import { MobileCta } from "@/components/mobile-cta";
 import { Faq } from "@/components/faq";
 import { Contact } from "@/components/contact";
@@ -24,8 +22,6 @@ function Index() {
         <Services />
         <Process />
         <Coverage />
-        <ClientFit />
-        <WhyUs />
         <Faq />
         <Contact />
       </main>

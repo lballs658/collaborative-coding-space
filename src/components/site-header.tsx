@@ -1,10 +1,8 @@
-import { Link } from "@tanstack/react-router";
 import { Phone, Menu, X } from "lucide-react";
 import { useState } from "react";
 
 const links = [
   { label: "Services", href: "#services" },
-  { label: "Process", href: "#process" },
   { label: "Coverage", href: "#coverage" },
   { label: "FAQ", href: "#faq" },
   { label: "Contact", href: "#contact" },
