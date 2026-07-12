@@ -101,7 +101,7 @@ export function Contact() {
               </span>
               <span>
                 <span className="block text-sm text-muted-foreground">Hours</span>
-                <span className="font-display text-lg font-semibold">9:00 AM – 7:00 PM</span>
+                <span className="font-display text-lg font-semibold">Mon – Sat · 9:00 AM – 7:00 PM</span>
               </span>
             </div>
           </div>
