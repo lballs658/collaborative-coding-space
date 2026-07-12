@@ -11,10 +11,6 @@ const faqs = [
     a: "Yes. The service is built for repair shops, body shops, performance shops, dealers, and approved private clients that need mobile electronics, programming, cloning, tuning, or diagnostics support.",
   },
   {
-    q: "Which brands are excluded from diagnostics?",
-    a: "Diagnostics are not offered for Volvo, Subaru, Nissan/Infiniti, or Honda/Acura. Programming and tuning may still be available for select vehicles in those brands after verification.",
-  },
-  {
     q: "Is diagnostics available to every customer?",
     a: "No. Diagnostics are available for qualified programming customers, repair shops, body shops, and repeat clients. General diagnostic-only requests are reviewed before booking.",
   },

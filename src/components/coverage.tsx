@@ -1,4 +1,4 @@
-import { MapPin, AlertTriangle, Navigation } from "lucide-react";
+import { MapPin, Clock, Navigation, PhoneCall, BadgeCheck } from "lucide-react";
 
 const areas = [
   "Bergen County, NJ",
@@ -56,26 +56,43 @@ export function Coverage() {
 
         <div className="rounded-2xl border border-border bg-card p-8 shadow-card">
           <span className="grid h-11 w-11 place-items-center rounded-lg bg-primary/10 text-primary">
-            <AlertTriangle className="h-5 w-5" />
+            <BadgeCheck className="h-5 w-5" />
           </span>
-          <h3 className="mt-5 font-display text-xl font-semibold">Brand &amp; job limits</h3>
+          <h3 className="mt-5 font-display text-xl font-semibold">What to expect when you call</h3>
           <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
-            Availability depends on VIN, model year, module, controller, software access, security
-            gateway rules, immobilizer data, battery condition, network condition, and previous work
-            done to the vehicle.
+            Every job starts with a quick verification so we show up prepared and priced correctly.
+            Share the VIN and vehicle history if you have it, and we handle the rest.
           </p>
-          <div className="mt-5 rounded-lg border border-border bg-surface/60 p-4">
-            <p className="text-sm text-foreground/90">
-              <span className="font-semibold text-foreground">Diagnostics are not offered</span> for
-              Volvo, Subaru, Nissan/Infiniti, or Honda/Acura. Programming and tuning may still be
-              available for select vehicles after verification.
-            </p>
-          </div>
-          <div className="mt-4 rounded-lg border border-border bg-surface/60 p-4">
-            <p className="text-sm text-foreground/90">
-              Unsupported emission-delete, readiness-tampering, or illegal road-use tuning requests
-              are not accepted. Calibration work is reviewed for supported and compliant use cases.
-            </p>
+          <div className="mt-5 space-y-3">
+            <div className="flex items-start gap-3 rounded-lg border border-border bg-surface/60 p-4">
+              <span className="mt-0.5 grid h-8 w-8 shrink-0 place-items-center rounded-lg bg-primary/10 text-primary">
+                <PhoneCall className="h-4 w-4" />
+              </span>
+              <p className="text-sm text-foreground/90">
+                <span className="font-semibold text-foreground">No calls without a VIN or vehicle details.</span>{" "}
+                A VIN, year, make, model, and a short description of the concern let us confirm
+                feasibility and quote accurately on the first call.
+              </p>
+            </div>
+            <div className="flex items-start gap-3 rounded-lg border border-border bg-surface/60 p-4">
+              <span className="mt-0.5 grid h-8 w-8 shrink-0 place-items-center rounded-lg bg-primary/10 text-primary">
+                <Clock className="h-4 w-4" />
+              </span>
+              <p className="text-sm text-foreground/90">
+                <span className="font-semibold text-foreground">Same-day slots when the route allows.</span>{" "}
+                Book early in the day for the best chance of same-day dispatch across NJ and NYC.
+              </p>
+            </div>
+            <div className="flex items-start gap-3 rounded-lg border border-border bg-surface/60 p-4">
+              <span className="mt-0.5 grid h-8 w-8 shrink-0 place-items-center rounded-lg bg-primary/10 text-primary">
+                <BadgeCheck className="h-4 w-4" />
+              </span>
+              <p className="text-sm text-foreground/90">
+                <span className="font-semibold text-foreground">Firm pricing, no bay time wasted.</span>{" "}
+                Travel, labor, and programming are quoted up front, so shops and clients know
+                exactly what the job costs before we roll.
+              </p>
+            </div>
           </div>
         </div>
       </div>
