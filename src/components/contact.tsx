@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Phone, MessageSquare, Clock, Send, CheckCircle2, AlertCircle } from "lucide-react";
+import { Phone, MessageSquare, Mail, Clock, Send, CheckCircle2, AlertCircle } from "lucide-react";
 
 function encode(data: Record<string, string>) {
   return new URLSearchParams(data).toString();
@@ -78,6 +78,20 @@ export function Contact() {
                 <span className="block text-sm text-muted-foreground">Text</span>
                 <span className="font-display text-lg font-semibold">
                   VIN &amp; service request
+                </span>
+              </span>
+            </a>
+            <a
+              href="mailto:autolabsolution@gmail.com"
+              className="flex items-center gap-3 rounded-xl border border-border bg-card px-5 py-4 transition-colors hover:border-primary/50"
+            >
+              <span className="grid h-10 w-10 place-items-center rounded-lg bg-primary/10 text-primary">
+                <Mail className="h-5 w-5" />
+              </span>
+              <span className="min-w-0">
+                <span className="block text-sm text-muted-foreground">Email</span>
+                <span className="block truncate font-display text-base font-semibold sm:text-lg">
+                  autolabsolution@gmail.com
                 </span>
               </span>
             </a>

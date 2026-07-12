@@ -1,6 +1,16 @@
 import { MapPin, Clock, Building2, CarFront } from "lucide-react";
 
-const areas = ["North New Jersey", "Manhattan", "Brooklyn", "Staten Island"];
+const areas = [
+  "Bergen County, NJ",
+  "Hudson County, NJ",
+  "Essex County, NJ",
+  "Passaic County, NJ",
+  "Union County, NJ",
+  "Morris County, NJ",
+  "Manhattan, NY",
+  "Brooklyn, NY",
+  "Staten Island, NY",
+];
 
 export function Coverage() {
   return (
@@ -11,7 +21,8 @@ export function Coverage() {
             Service area
           </p>
           <h2 className="mt-3 font-display text-3xl font-bold sm:text-4xl">
-            Mobile coverage across North Jersey and NYC.
+            Mobile coverage across Bergen, Hudson, Essex, Passaic, Union, and Morris counties, plus
+            Manhattan, Brooklyn, and Staten Island.
           </h2>
           <p className="mt-4 max-w-lg text-muted-foreground">
             Mobile service only. No public shop or walk-in location.
@@ -34,6 +45,16 @@ export function Coverage() {
               <Clock className="mt-0.5 h-5 w-5 shrink-0 text-primary" />
               <p className="text-sm leading-relaxed text-muted-foreground">
                 Hours: 9 AM–7 PM. Travel pricing varies by distance, tolls, parking, and job type.
+              </p>
+            </div>
+          </div>
+
+          <div className="mt-4 rounded-xl border border-border bg-card p-4">
+            <div className="flex items-start gap-3">
+              <CarFront className="mt-0.5 h-5 w-5 shrink-0 text-primary" />
+              <p className="text-sm leading-relaxed text-muted-foreground">
+                Not in a listed county? We can travel farther when travel costs are covered. Send
+                your location with the VIN and we’ll quote the trip up front.
               </p>
             </div>
           </div>
