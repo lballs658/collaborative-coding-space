@@ -10,8 +10,8 @@ export function SiteFooter() {
         </div>
         <p className="text-center text-xs text-muted-foreground">
           Mobile automotive electronics · NJ &amp; NYC ·{" "}
-          <a href="mailto:autolabsolution@gmail.com" className="underline hover:text-foreground">
-            autolabsolution@gmail.com
+          <a href="mailto:info@autolabsolutions.net" className="underline hover:text-foreground">
+            info@autolabsolutions.net
           </a>{" "}
           · Mobile service only, no walk-ins
         </p>
