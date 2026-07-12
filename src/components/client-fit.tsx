@@ -1,4 +1,4 @@
-import { Building2, CarFront, ShieldCheck, XCircle } from "lucide-react";
+import { Building2, CarFront, ShieldCheck, Sparkles } from "lucide-react";
 
 const goodFit = [
   "Repair shops needing module programming or coding after replacement",
@@ -8,11 +8,23 @@ const goodFit = [
   "Private clients with clear VIN, vehicle details, and a defined request",
 ];
 
-const badFit = [
-  "Random check-engine-light calls with no VIN or vehicle details",
-  "Unsupported brand diagnostics listed on this site",
-  "Illegal emissions-delete or readiness-tampering requests",
-  "Jobs where the battery, wiring, or vehicle condition is not service-ready",
+const advantages = [
+  {
+    title: "Fast, VIN-verified quotes",
+    body: "Send the VIN and a short description of the job. You get a clear feasibility answer and a firm price before anyone is dispatched.",
+  },
+  {
+    title: "We come to your bay",
+    body: "Mobile service to your shop, lot, or approved location means the vehicle never has to leave your workflow or your customer's timeline.",
+  },
+  {
+    title: "Real specialists, not generalists",
+    body: "Programming, cloning, coding, and calibration are our full-time focus. That means fewer surprises and a cleaner handoff on every job.",
+  },
+  {
+    title: "Backed by proper tooling",
+    body: "OEM software workflows, bench and boot support, and network-level diagnostic tools when the job needs more than a scan tool.",
+  },
 ];
 
 export function ClientFit() {
@@ -44,7 +56,7 @@ export function ClientFit() {
         </div>
 
         <div className="grid gap-4 md:grid-cols-2">
-          <div className="rounded-2xl border border-border bg-card p-6 shadow-card">
+          <div className="rounded-2xl border border-border bg-card p-6 shadow-card md:col-span-2">
             <div className="flex items-center gap-2">
               <ShieldCheck className="h-5 w-5 text-primary" />
               <h3 className="font-display text-lg font-semibold">Good-fit jobs</h3>
@@ -58,19 +70,18 @@ export function ClientFit() {
             </ul>
           </div>
 
-          <div className="rounded-2xl border border-border bg-card p-6 shadow-card">
-            <div className="flex items-center gap-2">
-              <XCircle className="h-5 w-5 text-primary" />
-              <h3 className="font-display text-lg font-semibold">Not a fit</h3>
+          {advantages.map((item) => (
+            <div
+              key={item.title}
+              className="rounded-2xl border border-border bg-card p-6 shadow-card"
+            >
+              <div className="flex items-center gap-2">
+                <Sparkles className="h-5 w-5 text-primary" />
+                <h3 className="font-display text-lg font-semibold">{item.title}</h3>
+              </div>
+              <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{item.body}</p>
             </div>
-            <ul className="mt-5 space-y-3">
-              {badFit.map((item) => (
-                <li key={item} className="text-sm leading-relaxed text-muted-foreground">
-                  {item}
-                </li>
-              ))}
-            </ul>
-          </div>
+          ))}
         </div>
       </div>
     </section>
