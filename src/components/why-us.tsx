@@ -27,8 +27,8 @@ const differentiators = [
   },
   {
     icon: ShieldCheck,
-    title: "Limits are stated upfront",
-    body: "Unsupported brands, unsupported requests, and non-compliant tuning jobs are filtered before they become problems.",
+    title: "Firm pricing upfront",
+    body: "Travel, labor, and programming are quoted before dispatch, so shops and clients know exactly what a job costs before we roll.",
   },
 ];
 
