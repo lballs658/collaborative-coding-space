@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Phone, MessageSquare, Mail, Clock, Send, CheckCircle2, AlertCircle } from "lucide-react";
+import { Phone, MessageSquare, Mail, Instagram, Clock, Send, CheckCircle2, AlertCircle } from "lucide-react";
 
 function encode(data: Record<string, string>) {
   return new URLSearchParams(data).toString();
