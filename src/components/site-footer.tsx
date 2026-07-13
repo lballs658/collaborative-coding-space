@@ -10,12 +10,22 @@ export function SiteFooter() {
           </span>
           <span className="font-display text-sm font-semibold">Auto Lab Solutions</span>
         </div>
-        <p className="text-center text-xs text-muted-foreground">
-          Mobile automotive electronics · NJ &amp; NYC ·{" "}
+        <p className="flex flex-wrap items-center justify-center gap-x-1.5 gap-y-1 text-center text-xs text-muted-foreground">
+          <span>Mobile automotive electronics · NJ &amp; NYC ·</span>
           <a href="mailto:info@autolabsolutions.net" className="underline hover:text-foreground">
             info@autolabsolutions.net
-          </a>{" "}
-          · Mobile service only, no walk-ins
+          </a>
+          <span>·</span>
+          <a
+            href="https://instagram.com/autolabllc"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-1 underline hover:text-foreground"
+          >
+            <Instagram className="h-3.5 w-3.5" />
+            @autolabllc
+          </a>
+          <span>· Mobile service only, no walk-ins</span>
         </p>
         <p className="text-xs text-muted-foreground">
           © {new Date().getFullYear()} Auto Lab Solutions
