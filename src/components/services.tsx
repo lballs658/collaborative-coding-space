@@ -22,9 +22,9 @@ const services = [
     body: "Computer-side fault finding for supported brands and qualified jobs.",
   },
   {
-    icon: KeyRound,
-    title: "Keys & immobilizer programming",
-    body: "Key, immobilizer, and security-related programming for supported vehicles and brands.",
+    icon: ShieldCheck,
+    title: "Immobilizer repair",
+    body: "Immobilizer and security-system repair and reconfiguration for supported vehicles and brands.",
   },
   {
     icon: Settings2,
