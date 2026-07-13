@@ -1,3 +1,5 @@
+import { Instagram } from "lucide-react";
+
 export function SiteFooter() {
   return (
     <footer className="border-t border-border bg-background">
