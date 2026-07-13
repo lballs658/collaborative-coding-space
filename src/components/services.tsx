@@ -1,4 +1,4 @@
-import { Cpu, Copy, Gauge, Stethoscope, KeyRound, Settings2, AlertTriangle } from "lucide-react";
+import { Cpu, Copy, Gauge, Stethoscope, ShieldCheck, Settings2, AlertTriangle } from "lucide-react";
 
 const services = [
   {
