@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Phone, MessageSquare, Mail, Clock, Send, CheckCircle2, AlertCircle } from "lucide-react";
+import { Phone, MessageSquare, Mail, Instagram, Clock, Send, CheckCircle2, AlertCircle } from "lucide-react";
 
 function encode(data: Record<string, string>) {
   return new URLSearchParams(data).toString();
@@ -93,6 +93,23 @@ export function Contact() {
                 <span className="block truncate font-display text-base font-semibold sm:text-lg">
                   info@autolabsolutions.net
                 </span>
+              </span>
+            </a>
+            <a
+              href="https://instagram.com/autolabllc"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-3 rounded-xl border border-border bg-card px-5 py-4 transition-colors hover:border-primary/50"
+            >
+              <span className="grid h-10 w-10 place-items-center rounded-lg bg-primary/10 text-primary">
+                <Instagram className="h-5 w-5" />
+              </span>
+              <span className="min-w-0">
+                <span className="block text-sm text-muted-foreground">Instagram</span>
+                <span className="block truncate font-display text-base font-semibold sm:text-lg">
+                  @autolabllc
+                </span>
+                <span className="block text-xs text-muted-foreground">See recent work</span>
               </span>
             </a>
             <div className="flex items-center gap-3 rounded-xl border border-border bg-card px-5 py-4 sm:col-span-2 lg:col-span-1">
