@@ -33,7 +33,7 @@ export function Coverage() {
           <div className="flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.18em] text-primary">
             <MapPin className="h-4 w-4" /> Counties covered
           </div>
-          <div className="mt-4 flex flex-wrap gap-2">
+          <div className="mt-4 flex flex-col gap-2 sm:flex-row sm:flex-wrap">
             {areas.map((a) => (
               <span
                 key={a}
@@ -51,7 +51,7 @@ export function Coverage() {
               <div>
                 <p className="text-sm font-semibold">Hours</p>
                 <p className="mt-0.5 text-sm text-muted-foreground">
-                  9 AM – 7 PM, seven days a week
+                  Mon – Sat · 9 AM – 7 PM
                 </p>
               </div>
             </div>
