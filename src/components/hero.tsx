@@ -55,7 +55,7 @@ export function Hero() {
           <div className="overflow-hidden rounded-2xl border border-border shadow-card">
             <img
               src={heroImg}
-              alt="Technician running automotive programming software on a laptop connected to a vehicle"
+              alt="Technician holding a professional OBD-II scan tool displaying live diagnostic trouble codes inside a vehicle"
               width={1600}
               height={1200}
               className="aspect-[4/3] h-full w-full object-cover"
