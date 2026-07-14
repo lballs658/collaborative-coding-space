@@ -17,8 +17,8 @@ export function Hero() {
           </h1>
 
           <p className="mt-5 max-w-xl text-base leading-relaxed text-muted-foreground sm:text-lg">
-            Mobile programming, module cloning, supported tuning, keys, and qualified diagnostics
-            for repair shops, body shops, performance shops, dealers, and qualified private clients.
+            Mobile programming, module cloning, supported tuning, and qualified diagnostics for
+            repair shops, body shops, performance shops, dealers, and qualified private clients.
           </p>
 
           <div className="mt-8 flex flex-wrap items-center gap-3">
