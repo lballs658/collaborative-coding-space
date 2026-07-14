@@ -30,6 +30,22 @@ export function SiteFooter() {
         <p className="text-xs text-muted-foreground">
           © {new Date().getFullYear()} Auto Lab Solutions
         </p>
+        <a
+          href="https://websitelaunches.com/site/autolabsolutions.net"
+          target="_blank"
+          rel="noopener"
+          className="opacity-60 transition-opacity hover:opacity-100"
+          aria-label="Established online - Public launch record"
+        >
+          <img
+            src="https://websitelaunches.com/badge/autolabsolutions.net.svg?theme=dark"
+            alt="Established online - Public launch record"
+            width="255"
+            height="55"
+            loading="lazy"
+          />
+        </a>
+
       </div>
     </footer>
   );
