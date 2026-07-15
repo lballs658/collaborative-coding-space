@@ -28,7 +28,7 @@ export function Contact() {
     setStatus("sending");
 
     try {
-      const response = await fetch("/", {
+      const response = await fetch("/forms.html", {
         method: "POST",
         headers: { "Content-Type": "application/x-www-form-urlencoded" },
         body: encode(payload),
@@ -126,6 +126,7 @@ export function Contact() {
 
         <form
           name="callback-request"
+          action="/forms.html"
           method="POST"
           data-netlify="true"
           netlify-honeypot="bot-field"
