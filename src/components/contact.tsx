@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Phone, MessageSquare, Mail, Instagram, Clock, Send, CheckCircle2, AlertCircle, MapPin } from "lucide-react";
+import { ServiceAreaMap } from "./service-area-map";
 
 function encode(data: Record<string, string>) {
   return new URLSearchParams(data).toString();
