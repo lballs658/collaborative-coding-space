@@ -1,4 +1,7 @@
-import { Instagram } from "lucide-react";
+import { Instagram, MapPin } from "lucide-react";
+
+const GOOGLE_MAPS_URL =
+  "https://www.google.com/search?q=Auto+Lab+Solutions&stick=H4sIAAAAAAAA_-NgU1IxqEgyM0lKNU62MEo2trA0NrQyqDAyNk5NSTO0SEsySDYzSU1dxCrkWFqSr-CTmKQQnJ9TWpKZn1cMAGlXEf49AAAA&hl=en&mat=CQsoVtQPueA1ElcBa0lj_9CKL9tS4A6lylhMqISc1uKu2HNAmxAldAtgpBoaQAHGsWbfWq5ZScV6mE0qGsPEZXjVY8sAyPgpdy9E_sDwiVYain3GrjTP8i10YNAdgtmb18c&authuser=4";
 
 export function SiteFooter() {
   return (
