@@ -1,7 +1,4 @@
-import { Instagram, MapPin } from "lucide-react";
-
-const GOOGLE_MAPS_URL =
-  "https://www.google.com/search?q=Auto+Lab+Solutions&stick=H4sIAAAAAAAA_-NgU1IxqEgyM0lKNU62MEo2trA0NrQyqDAyNk5NSTO0SEsySDYzSU1dxCrkWFqSr-CTmKQQnJ9TWpKZn1cMAGlXEf49AAAA&hl=en&mat=CQsoVtQPueA1ElcBa0lj_9CKL9tS4A6lylhMqISc1uKu2HNAmxAldAtgpBoaQAHGsWbfWq5ZScV6mE0qGsPEZXjVY8sAyPgpdy9E_sDwiVYain3GrjTP8i10YNAdgtmb18c&authuser=4";
+import { Instagram } from "lucide-react";
 
 export function SiteFooter() {
   return (
@@ -28,16 +25,7 @@ export function SiteFooter() {
             <Instagram className="h-3.5 w-3.5" />
             @autolabllc
           </a>
-          <span>· Mobile service only, no walk-ins ·</span>
-          <a
-            href={GOOGLE_MAPS_URL}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-1 underline hover:text-foreground"
-          >
-            <MapPin className="h-3.5 w-3.5" />
-            Find us on Google Maps
-          </a>
+          <span>· Mobile service only, no walk-ins</span>
         </p>
         <p className="text-xs text-muted-foreground">
           © {new Date().getFullYear()} Auto Lab Solutions
