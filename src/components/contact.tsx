@@ -1,8 +1,5 @@
-import { lazy, useState } from "react";
-import { ClientOnly } from "@tanstack/react-router";
+import { useState } from "react";
 import { Phone, MessageSquare, Mail, Instagram, Clock, Send, CheckCircle2, AlertCircle, MapPin } from "lucide-react";
-
-const ServiceAreaMap = lazy(() => import("./service-area-map"));
 
 function encode(data: Record<string, string>) {
   return new URLSearchParams(data).toString();
@@ -127,10 +124,15 @@ export function Contact() {
           </div>
 
           <div className="mt-6 overflow-hidden rounded-2xl border border-border bg-card shadow-card">
-            <ClientOnly fallback={<div className="h-[260px] w-full bg-surface/60" />}>
-              <ServiceAreaMap />
-            </ClientOnly>
-
+            <iframe
+              title="Auto Lab Solutions service area map"
+              src="https://www.google.com/maps?q=Bergen+County+NJ&z=9&output=embed"
+              width="100%"
+              height="260"
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              className="block w-full border-0"
+            />
             <a
               href="https://www.google.com/search?q=Auto+Lab+Solutions&stick=H4sIAAAAAAAA_-NgU1IxqEgyM0lKNU62MEo2trA0NrQyqDAyNk5NSTO0SEsySDYzSU1dxCrkWFqSr-CTmKQQnJ9TWpKZn1cMAGlXEf49AAAA&hl=en&mat=CQsoVtQPueA1ElcBa0lj_9CKL9tS4A6lylhMqISc1uKu2HNAmxAldAtgpBoaQAHGsWbfWq5ZScV6mE0qGsPEZXjVY8sAyPgpdy9E_sDwiVYain3GrjTP8i10YNAdgtmb18c&authuser=4"
               target="_blank"
