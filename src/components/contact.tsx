@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Phone, MessageSquare, Mail, Instagram, Clock, Send, CheckCircle2, AlertCircle } from "lucide-react";
+import { Phone, MessageSquare, Mail, Instagram, Clock, Send, CheckCircle2, AlertCircle, MapPin } from "lucide-react";
 
 function encode(data: Record<string, string>) {
   return new URLSearchParams(data).toString();
@@ -122,7 +122,34 @@ export function Contact() {
               </span>
             </div>
           </div>
+
+          <div className="mt-6 overflow-hidden rounded-2xl border border-border bg-card shadow-card">
+            <iframe
+              title="Auto Lab Solutions service area map"
+              src="https://www.google.com/maps?q=Bergen+County+NJ&z=9&output=embed"
+              width="100%"
+              height="260"
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              className="block w-full border-0"
+            />
+            <a
+              href="https://www.google.com/search?q=Auto+Lab+Solutions&stick=H4sIAAAAAAAA_-NgU1IxqEgyM0lKNU62MEo2trA0NrQyqDAyNk5NSTO0SEsySDYzSU1dxCrkWFqSr-CTmKQQnJ9TWpKZn1cMAGlXEf49AAAA&hl=en&mat=CQsoVtQPueA1ElcBa0lj_9CKL9tS4A6lylhMqISc1uKu2HNAmxAldAtgpBoaQAHGsWbfWq5ZScV6mE0qGsPEZXjVY8sAyPgpdy9E_sDwiVYain3GrjTP8i10YNAdgtmb18c&authuser=4"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center justify-between gap-3 border-t border-border px-4 py-3 text-sm text-foreground/90 transition-colors hover:bg-surface/60"
+            >
+              <span className="inline-flex items-center gap-2">
+                <MapPin className="h-4 w-4 text-primary" />
+                Find us on Google Maps
+              </span>
+              <span className="text-xs text-muted-foreground">
+                Mobile service · NJ &amp; NYC
+              </span>
+            </a>
+          </div>
         </div>
+
 
         <form
           name="callback-request"
