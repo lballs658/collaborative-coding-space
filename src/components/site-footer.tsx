@@ -28,7 +28,16 @@ export function SiteFooter() {
             <Instagram className="h-3.5 w-3.5" />
             @autolabllc
           </a>
-          <span>· Mobile service only, no walk-ins</span>
+          <span>· Mobile service only, no walk-ins ·</span>
+          <a
+            href={GOOGLE_MAPS_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-1 underline hover:text-foreground"
+          >
+            <MapPin className="h-3.5 w-3.5" />
+            Find us on Google Maps
+          </a>
         </p>
         <p className="text-xs text-muted-foreground">
           © {new Date().getFullYear()} Auto Lab Solutions
