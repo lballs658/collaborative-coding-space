@@ -1,5 +1,8 @@
-import { useState } from "react";
+import { lazy, useState } from "react";
+import { ClientOnly } from "@tanstack/react-router";
 import { Phone, MessageSquare, Mail, Instagram, Clock, Send, CheckCircle2, AlertCircle, MapPin } from "lucide-react";
+
+const ServiceAreaMap = lazy(() => import("./service-area-map"));
 
 function encode(data: Record<string, string>) {
   return new URLSearchParams(data).toString();
