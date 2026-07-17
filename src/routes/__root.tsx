@@ -26,10 +26,12 @@ const serviceAreas = [
 
 const localBusinessJsonLd = {
   "@context": "https://schema.org",
-  "@type": "AutoRepair",
+  "@type": "LocalBusiness",
   name: "Auto Lab Solutions",
   description:
     "Mobile automotive electronics service specializing in OEM programming, ECU and TCU cloning, supported tuning, coding, electronic service functions, and qualified diagnostics across Bergen, Hudson, Essex, Passaic, Union, and Morris counties in New Jersey, plus Manhattan, Brooklyn, and Staten Island.",
+  url: "https://autolabsolutions.net",
+  sameAs: ["https://share.google/7O1X5IVX525oHmMEv"],
   telephone: "+15513201730",
   priceRange: "Varies by distance, vehicle, controller, and job type",
   areaServed: serviceAreas,
