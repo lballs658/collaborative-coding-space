@@ -18,15 +18,17 @@ const cards = [
       "Volkswagen / Audi — ODIS",
       "Porsche — PT4G",
       "Jaguar / Land Rover — SDD",
+      "Volvo — VIDA",
     ],
   },
   {
     icon: Compass,
     title: "Asian OEM Platforms",
     items: [
-      "Toyota / Lexus — Techstream",
+      "Toyota / Lexus — Techstream and ISTA",
       "Honda / Acura — HDS",
       "Nissan / Infiniti — CONSULT",
+      "Mazda — IDS and MADRS",
     ],
   },
   {
