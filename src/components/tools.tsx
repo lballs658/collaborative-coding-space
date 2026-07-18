@@ -32,15 +32,6 @@ const cards = [
     ],
   },
   {
-    icon: Compass,
-    title: "Asian OEM Platforms",
-    items: [
-      "Toyota / Lexus — Techstream",
-      "Honda / Acura — HDS",
-      "Nissan / Infiniti — CONSULT",
-    ],
-  },
-  {
     icon: Wrench,
     title: "Primary Tuning Platforms",
     items: ["Alientech — KESS3", "AutoTuner", "MAGICMOTORSPORT — FLEX"],
