@@ -3,7 +3,7 @@ import { SiteHeader } from "@/components/site-header";
 import { Hero } from "@/components/hero";
 import { Services } from "@/components/services";
 import { Tools } from "@/components/tools";
-import { Process } from "@/components/process";
+
 import { Coverage } from "@/components/coverage";
 import { MobileCta } from "@/components/mobile-cta";
 import { Faq } from "@/components/faq";
@@ -22,7 +22,7 @@ function Index() {
         <Hero />
         <Services />
         <Tools />
-        <Process />
+        
         <Coverage />
         <Faq />
         <Contact />
